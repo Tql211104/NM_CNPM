@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css" /> 
+    <title>Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <header>
+        <h1>Book Shop</h1>
+        <nav id="mysidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div id="danhmucsach">Danh mục sách</div>
+            <a href="#" onclick="scrollToSection('trinhtham')">Trinh Thám</a>
+            <a href="#" onclick="scrollToSection('giaoduc')">Giáo Dục</a>
+            <a href="#" onclick="scrollToSection('sachgiaokhoa')">Sách Giáo Khoa</a>
+            <a href="#" onclick="scrollToSection('truyentranh')">Truyền Tranh</a>
+            <a href="#" onclick="scrollToSection('tieuthuyet')">Tiểu Thuyết</a>
+        </nav>
+        <span id="nav" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <section class="featured-books" id="trinhtham">
+        <div class="book">
+            <img src="images/Bia_Hoa_nguc.jpg" alt="Book 1">
+            <h3>Book Title 1</h3>
+            <p>Author: Author Name</p>
+            <p>Price: $19.99</p>
+        </div>
+        <div class="book">
+            <img src="images/images (1).jpg" alt="Book 3">
+            <h3>Book Title 3</h3>
+            <p>Author: Author Name</p>
+            <p>Price: $29.99</p>
+        </div>
+   
+    </section>
+
+    <section class="featured-books" id="giaoduc">
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Author: Author Name</p>
+            <p>Price: $24.99</p>
+        </div>
+    </section>
+
+    <section class="featured-books" id="sgk">
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Author: Author Name</p>
+            <p>Price: $24.99</p>
+        </div>       
+    </section>
+
+    <section class="featured-books" id="truyentranh">
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Author: Author Name</p>
+            <p>Price: $24.99</p>
+        </div>   
+    </section>
+
+    <section class="featured-books" id="tieuthuyet">
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h3>Book Title 2</h3>
+            <p>Author: Author Name</p>
+            <p>Price: $24.99</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Book Shop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mysidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mysidenav").style.width = "0";
+        }
+
+        function scrollToSection(sectionId) {
+            var element = document.getElementById(sectionId);
+            element.scrollIntoView({ behavior: 'smooth' });
+            closeNav(); // đóng thanh điều hướng khi nhấp vào thư mục
+        }
+    </script>
+
+</body>
+</html>
